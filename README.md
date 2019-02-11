@@ -6,7 +6,7 @@
 
 ## Installation/Use
 
-### You should be able to run this right off the bat. Get the executable from the dist folder and everything **__should__** go smoothly.
+### You should be able to run this right off the bat. Get the executable from the dist folder and everything **_should_** go smoothly.
 
 ## Improvements
 
