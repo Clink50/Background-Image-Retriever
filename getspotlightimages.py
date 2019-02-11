@@ -10,9 +10,7 @@ logging.basicConfig(filename="background-image.log", filemode="a", level=logging
 # load home path
 PC_NAME = os.environ['HOME']
 
-# pathToImages = os.path.join("C:\\", "Users", PC_NAME, "AppData", "Local", "Packages", "Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy", "LocalState", "Assets")
-pathToImages = os.path.join("C:\\", "Users", PC_NAME, "Downloads", "Assets")
-pathToTest =   os.path.join("C:\\", "Users", PC_NAME, "Pictures", "Test")
+pathToImages = os.path.join("C:\\", "Users", PC_NAME, "AppData", "Local", "Packages", "Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy", "LocalState", "Assets")
 pathToMobile = os.path.join(pathToTest, "Mobile")
 
 currentYear = str(datetime.now().year)
