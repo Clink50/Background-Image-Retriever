@@ -12,7 +12,7 @@ PC_NAME = os.environ['HOME']
 
 # pathToImages = os.path.join("C:\\", "Users", PC_NAME, "AppData", "Local", "Packages", "Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy", "LocalState", "Assets")
 pathToImages = os.path.join("C:\\", "Users", PC_NAME, "Downloads", "Assets")
-pathToTest =   os.path.join("C:\\", "Users", PC_NAME, "Pictures", "Test2")
+pathToTest =   os.path.join("C:\\", "Users", PC_NAME, "Pictures", "Test")
 pathToMobile = os.path.join(pathToTest, "Mobile")
 
 currentYear = str(datetime.now().year)
