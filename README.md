@@ -6,7 +6,7 @@
 
 ## Installation/Use
 
-### You should be able to run this right off the bat. Get the executable from the dist folder and everything **_should_** go smoothly.
+### You will have to install OpenCV and shutil to run this. I'm not sure how to package this with executable. Once that is done, get the executable from the dist folder and everything **_should_** go smoothly.
 
 ## Improvements
 
