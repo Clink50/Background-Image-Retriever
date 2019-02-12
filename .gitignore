@@ -4,8 +4,6 @@ __pycache__/
 # Distribution / packaging
 build/
 
-# Environments
-.env
-
 # Other
-getspotlightimages.spec
+image-retriever.spec
+SpotlightImageRetriever.ico
