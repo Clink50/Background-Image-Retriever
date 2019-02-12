@@ -8,7 +8,7 @@ import logging
 logging.basicConfig(filename="background-image.log", filemode="a", level=logging.DEBUG)
 
 # load home path
-PC_NAME = os.environ['HOME']
+PC_NAME = os.path.expanduser('~')
 
 pathToImages = os.path.join("C:\\", "Users", PC_NAME, "AppData", "Local", "Packages", "Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy", "LocalState", "Assets")
 pathToTest =   os.path.join("C:\\", "Users", PC_NAME, "Pictures", "Test")
