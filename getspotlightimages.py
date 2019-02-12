@@ -2,13 +2,9 @@ import os
 from shutil import copy, move
 from datetime import datetime
 from cv2 import imread, split, subtract, countNonZero
-import logging
-
-# set up logging to a file
-logging.basicConfig(filename="background-image.log", filemode="a", level=logging.DEBUG)
 
 # load home path
-PC_NAME = os.path.expanduser('~')
+PC_NAME = os.path.expanduser("~")
 
 pathToImages = os.path.join("C:\\", "Users", PC_NAME, "AppData", "Local", "Packages", "Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy", "LocalState", "Assets")
 pathToTest =   os.path.join("C:\\", "Users", PC_NAME, "Pictures", "Test")
@@ -76,7 +72,7 @@ def checkForDuplicates(isDesktopImage, renamedFile, incomingImage):
             os.rename(renamedFile, renamedFile[5:])
         return
     except Exception as error:
-        logging.exception("Exception in checkForDuplicates():", str(error))
+        print("Exception in checkForDuplicates():", str(error))
         
 '''
     Main function to start the process which goes to the Assets folder,
@@ -103,7 +99,7 @@ def main():
 
             # if the size is less than 150KB then skip and continue to next image
             if(sizeOfFile < 150000):
-                logging.debug("File not large enough. Skipping...")
+                print("File not large enough. Skipping...")
                 continue
 
             # copy the file over to my test folder
@@ -118,7 +114,7 @@ def main():
             # rename the file
             os.rename(file, renamedFile)
 
-            logging.debug("Reading image using imread with:", str(renamedFile))
+            print("Reading image using imread with:", str(renamedFile))
 
             # read the incoming image 
             incomingImage = imread(renamedFile)
@@ -126,7 +122,7 @@ def main():
             # if the image is in a strange format and cannot be read by cv2
             # skip the image because it is not an image we care about
             if incomingImage is None: 
-                logging.debug("Bad Image because incomingImage is of NoneType. Skipping...")
+                print("Bad Image because incomingImage is of NoneType. Skipping...")
                 os.remove(renamedFile)
                 os.chdir(pathToImages)
                 continue
@@ -134,17 +130,17 @@ def main():
             # extract the 3 variables that come from shape
             height, width, channels = incomingImage.shape
             
-            logging.debug("Image shape:", height, width, channels)
+            print("Image shape:", height, width, channels)
 
             # if the image is mobile
             if height == 1920 and width == 1080 and channels == 3:
-                logging.debug("Image is for Mobile:", str(renamedFile))
+                print("Image is for Mobile:", str(renamedFile))
                 # put it in the mobile folder
                 move(renamedFile, os.path.join(pathToMobile))
                 checkForDuplicates(False, renamedFile, incomingImage) 
             # else if the image is for the desktop
             elif height == 1080 and width == 1920 and channels == 3:
-                logging.debug("Image is for Desktop:", renamedFile)
+                print("Image is for Desktop:", renamedFile)
                 checkForDuplicates(True, renamedFile, incomingImage)
             # else we don't want the image, so remove it from the test folder
             else:
@@ -155,9 +151,12 @@ def main():
             # else it is a desktop image so leave it in the Test folder
             # and change back to the directory with the original images
             os.chdir(pathToImages)
+        
+        os.startfile(pathToTest)
+        print("Done!")
 
     except Exception as error:
-        logging.exception("Exception occurred in main():", str(error))
+        print("Exception occurred in main():", str(error))
 
 '''
     Beginning of script
