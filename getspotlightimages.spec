@@ -4,10 +4,10 @@ block_cipher = None
 
 
 a = Analysis(['getspotlightimages.py'],
-             pathex=['C:\\Users\\Travis Clinkscales\\AppData\\Local\\Programs\\Python\\Python37-32\\Lib\\site-packages\\cv2\\opencv_ffmpeg400.dll', 'C:\\Users\\Travis Clinkscales\\AppData\\Local\\Programs\\Python\\Python37-32\\Lib\\shutil.py', 'D:\\Github\\GetImages'],
+             pathex=['D:\\Github\\GetImages'],
              binaries=[],
              datas=[],
-             hiddenimports=[],
+             hiddenimports=['cv2', 'shutil'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
