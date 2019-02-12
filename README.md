@@ -1,4 +1,4 @@
-# Background-Image-Retriever
+# Background-Image-Retriever - Version 2.0
 
 ## Overview
 
@@ -6,7 +6,7 @@
 
 ## Installation/Use
 
-### You will have to install OpenCV and shutil to run this. I'm not sure how to package this with executable. Once that is done, get the executable from the dist folder and everything **_should_** go smoothly.
+### Get the executable from the dist folder and everything **_should_** go smoothly! Please let me know if you run into any issues!
 
 ## Improvements
 
