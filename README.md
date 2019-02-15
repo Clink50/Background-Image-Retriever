@@ -2,7 +2,7 @@
 
 ## Overview
 
-### This is just a very simple script that I made in like 10 minutes. I was looking at the background images that I get on Windows 10 and I'm always wishing I could find images like that. I did a quick google on where these images are located and come to find out that the images are pulled from the internet and saved on my machine. So I decided to get those images before they are deleted by Windows by setting up a task and scheduled it to run every morning at 6 AM to save to a folder in my Pictures. It works like a charm and is pretty simple.
+### I was looking at the background images that I get on Windows 10 and I'm always wishing I could find images like that. I did a quick google on where these images are located and come to find out that the images are pulled from the internet and saved on my machine. So I decided to get those images before they are deleted by Windows by setting up a task and scheduled it to run every morning at 6 AM to save to a folder in my Pictures. It works like a charm and is pretty simple.
 
 ## Installation/Use
 
